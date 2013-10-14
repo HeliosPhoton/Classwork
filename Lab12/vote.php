@@ -4,8 +4,6 @@ session_start();
 $voteResult = array('Pikachu' , 'Ash');
 $vote = $_POST['vote'];
 
-//$_SESSION['Pikachu'] = $voteResult['Pikachu'];
-//$_SESSION['Ash'] = $voteResult['Ash'];
 
 if($vote == 'pikachu')
 {
