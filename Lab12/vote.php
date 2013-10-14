@@ -4,20 +4,20 @@ session_start();
 $voteResult = array('Pikachu' , 'Ash');
 $vote = $_POST['vote'];
 
-$_SESSION['Pikachu'] = 0;
-$_SESSION['Ash'] = 0;
+//$_SESSION['Pikachu'] = $voteResult['Pikachu'];
+//$_SESSION['Ash'] = $voteResult['Ash'];
 
 if($vote == 'pikachu')
 {
 	$_SESSION['Pikachu'] = $_SESSION['Pikachu']+1;
-
+	$voteResult['Pikachu'] = $_SESSION['Pikachu'];
 }
 
 
 if($vote == 'ash')
 {
 	$_SESSION['Ash'] = $_SESSION['Ash']+1;
-
+	$voteResult['Ash'] = $_SESSION['Ash'];
 }
 
 echo "<p> Pikachu : " . $_SESSION['Pikachu'] . "</p>"; 
