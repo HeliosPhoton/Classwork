@@ -1,0 +1,6 @@
+CREATE TABLE PersonInfo ( Day VARCHAR(255) NOT NULL, 
+			calories_burned DOUBLE, 
+			calories_consumed DOUBLE, 
+			exercise_type VARCHAR(255), 
+			exercise_duration DOUBLE,
+			PRIMARY KEY (Day));

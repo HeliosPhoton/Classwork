@@ -1,0 +1,6 @@
+INSERT INTO healthInfo
+(Day, calories_burned, calories_consumed,  exercise_type, exercise_duration)
+VALUES("Sept-12", 120, 2000, "running", 10),
+      ( "Sept-13", 100, 1800, "swimming", 20),
+      ( "Sept-14"", 200, 2200, "cycling", 20)
+      ( "Sept-15", 175, 1650, "running", 15);

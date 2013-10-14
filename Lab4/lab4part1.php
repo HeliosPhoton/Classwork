@@ -1,5 +1,3 @@
-
-
 <?php
 
 $aFruits = array ("Apple"=>80, "Orange"=>79, "Banana"=>80, "Lemon"=>78, "Mango"=>100);
@@ -17,7 +15,7 @@ print("<td> Fruit Name </td>");
 print("<td> Calories </td>");
 print("</tr>");
 
-foreach($aFruits as $fruit => $cal)
+foreach($aFruits as $fname => $calories)
 {
 	print("<tr><td> $fname</td>");
 	print("<td> $calories </td></tr>");

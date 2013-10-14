@@ -1,0 +1,7 @@
+CREATE TABLE posts ( post_id INT NOT NULL, 
+			author VARCHAR(255), 
+			post_title VARCHAR(255), 
+			book_title VARCHAR(255), 
+			post TEXT,
+                        date_published TIMESTAMP,
+			PRIMARY KEY (post_id));
