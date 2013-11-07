@@ -4,7 +4,7 @@ $con= new dbconnect();
 $con->connect();
 if(isset($_POST['DELETE'])) {
         $postID = $_POST['DELETE'];
-	$sSql = "DELETE FROM posts WHERE post_id=\"$postID\"";
+	$sSql = "DELETE FROM bookposts WHERE post_id=\"$postID\"";
       echo $sSql;
 	  
 	  
@@ -14,4 +14,4 @@ if(isset($_POST['DELETE'])) {
 	
 }
 ?>
-<a href="lab11.php">Home</a>
+<a href="blogphase1.php">Home</a>

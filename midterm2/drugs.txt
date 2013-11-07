@@ -1,0 +1,9 @@
+CREATE TABLE drugs ( 
+					drug_id INT NOT NULL, 
+					description TEXT NOT NULL,
+					unit_price INT NOT NULL,					
+					quantity_available INT NOT NULL,
+                    date_published TIMESTAMP NOT NULL, 
+					PRIMARY KEY(drug_id)
+					)
+					ENGINE=InnoDB;

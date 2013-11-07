@@ -1,0 +1,10 @@
+CREATE TABLE orders( 
+					order_id INT AUTO_INCREMENT NOT NULL, 
+					drug_id INT NOT NULL,
+					quantity INT NOT NULL,					
+					customer_id INT NOT NULL,
+					PRIMARY KEY(order_id),
+					FOREIGN KEY (drug_id) REFERENCES drugs(drug_id) ON DELETE CASCADE ON UPDATE CASCADE,
+					FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE ON UPDATE CASCADE
+					)
+					ENGINE=InnoDB;

@@ -1,0 +1,10 @@
+CREATE TABLE bookcomments ( 
+					comment_id INT AUTO_INCREMENT , 
+					post_id INT,
+					author VARCHAR(255),					
+					comment TEXT,
+                    date_published TIMESTAMP, 
+					PRIMARY KEY(comment_id),
+					FOREIGN KEY (post_id) 
+					REFERENCES bookposts(post_id) ON DELETE CASCADE ON UPDATE CASCADE
+					);

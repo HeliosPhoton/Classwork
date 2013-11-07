@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--address-->
+<ADDRESSES>
+
+
+	<ADDRESS>
+		<FNAME>James</FNAME>
+		<LNAME>Bond</LNAME>
+		<STREET>111 Cat St.</STREET>
+		<EMAIL>
+			<EMAIL0>snakes@gmail.com</EMAIL0>
+		</EMAIL>
+	</ADDRESS>
+
+	<ADDRESS>
+		<FNAME>Ash</FNAME>
+		<LNAME>Ketchum</LNAME>
+		<STREET>101 Kanto St.</STREET>
+		<EMAIL>
+			<EMAIL0>ubersnake@gmail.com</EMAIL0>
+			<EMAIL1>metalsnake@gmail.com</EMAIL1>
+		</EMAIL>
+	</ADDRESS>
+	
+	<ADDRESS>
+		<FNAME>Mew</FNAME>
+		<LNAME>Two</LNAME>
+		<STREET>2 Johnto St.</STREET>
+		<EMAIL>
+			<EMAIL0>sneakysnake@yahoo.com</EMAIL0>
+			<EMAIL1>ninjasnake@yahoo.com</EMAIL1>
+			<EMAIL2>rainbowsnake@yahoo.com</EMAIL2>
+		</EMAIL>
+	</ADDRESS>
+
+</ADDRESSES>

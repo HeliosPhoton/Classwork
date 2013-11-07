@@ -1,0 +1,8 @@
+CREATE TABLE OrderDispatches( 
+					dispatch_id INT AUTO_INCREMENT NOT NULL, 
+					order_id INT NOT NULL,
+					total_price INT NOT NULL,
+					PRIMARY KEY(dispatch_id),
+					FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE ON UPDATE CASCADE
+					)
+					ENGINE=InnoDB;

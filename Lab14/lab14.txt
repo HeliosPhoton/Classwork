@@ -1,0 +1,15 @@
+1. SELECT lastName, firstName FROM Student where stuID = (SELECT stuID FROM Enroll where classNo = "CSC203A");
+
+
+2. SELECT lastName, firstName, Enroll.grade from Student, Enroll WHERE classNo = "ART103 AND Enroll.stuId = Student.stuID;
+
+3. SELECT classNO FROM Class WHERE facId = ( SELECT facId FROM Faculty WHERE name = "Smith"	AND department = "CSC" ) ;
+
+4. SELECT classNO FROM Class WHERE facId IN ( SELECT facId FROM Faculty WHERE name = "Smith" AND department = "CSC" OR name = "Byrne" AND department = "MATH" ;
+
+5. SELECT lastName, firstName, stuID From Student where stuID IN 
+(SELECT stuID from Enroll where classNo = "MTH101B" OR classNo = "MTH103C")
+ORDER by lastName;
+
+6. SELECT * from Enroll
+GROUP BY stuId;
