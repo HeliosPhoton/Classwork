@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE ORDERS PUBLIC '.' 'orders.dtd'>
+<?xml-stylesheet type="text/css" href="orders.css"?>
+
+
+<ORDERS>
+    <order order_id="1">
+        <date>11/3/13</date>
+        <item>cookies</item>
+        <quantity>1</quantity>
+        <cust_ID>1</cust_ID>
+        <cust_address>11 street</cust_address>
+        <price>100</price>
+    </order>
+    
+    <order order_id="2">
+        <date>11/4/13</date>
+        <item>cakes</item>
+        <quantity>2</quantity>
+        <cust_ID>2</cust_ID>
+        <cust_address>33 Road</cust_address>
+        <price>5</price>
+    </order>
+    
+    <order order_id="3">
+        <date>11/4/15</date>
+        <item>PIES</item>
+        <quantity>9</quantity>
+        <cust_ID>3</cust_ID>
+        <cust_address>5343 Avenue</cust_address>
+        <price>1</price>
+    </order>
+    
+</ORDERS>

@@ -1,0 +1,53 @@
+/*orders.css*/
+
+
+ORDERS
+{
+  background-color: #ffffff;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+date
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+}
+
+item
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+}
+
+
+
+quantity
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+}
+
+cust_ID
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+ }
+
+cust_address
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+}
+
+price
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+  }

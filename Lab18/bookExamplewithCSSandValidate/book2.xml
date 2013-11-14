@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE Books PUBLIC '.' 'book.dtd'>
+<?xml-stylesheet type="text/css" href="supplements.css"?>
+
+<Books>
+	<Book>
+	    <Title>A Very Good Book</Title>
+	    <Author>Jane Doe</Author>
+	    <PublishingInfo>
+		<PublisherName>Sams Publishing</PublisherName>
+		<PublisherCity>Indianapolis</PublisherCity>
+		<PublishedYear>2008</PublishedYear>
+	</PublishingInfo>
+	</Book>
+	<Book>
+	    <Title>An Academic Book</Title>
+	    <Author>Anne Smith</Author>
+	    <PublishingInfo>
+		<PublisherName>University of California Press</PublisherName>
+		<PublisherCity>Berkeley</PublisherCity>
+		<PublishedYear>2008</PublishedYear>
+	    </PublishingInfo>
+	</Book>
+	<Book>
+	    <Title>Some Fluff Fiction</Title>
+	    <Author>Jimbo Jones</Author>
+	    <PublishingInfo>
+		<PublisherName>Fluffy Press</PublisherName>
+		<PublisherCity>New York</PublisherCity>
+		<PublishedYear>2007</PublishedYear>
+	    </PublishingInfo>
+	</Book>
+</Books>

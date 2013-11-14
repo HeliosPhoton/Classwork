@@ -1,0 +1,49 @@
+/*supplements.css*/
+
+Books
+{
+  background-color: #ffffff;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+Title
+{
+  background-color: green;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  padding: 5pt;
+  margin-bottom:3pt;
+  margin-right:0;
+}
+
+Author
+{
+  display: block;
+  margin-top: 10pt;
+  margin-left:0pt;
+}
+
+
+
+PublisherName
+{
+    display: block;
+    margin-top: 10pt;
+  margin-left:0pt;
+}
+
+PublisherCity
+{
+    display: block;
+    margin-top: 10pt;
+  margin-left:0pt;
+}
+
+PublishedYear
+{
+  display: block;
+  color: #000000;
+  font-size: 1.2em;
+  margin-left: 20pt;
+}

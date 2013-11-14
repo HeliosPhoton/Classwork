@@ -1,0 +1,9 @@
+<!ELEMENT ORDERS (order)*>
+<!ELEMENT order (date,item,quantity,cust_ID,cust_address,price)>
+<!ATTLIST order order_id CDATA #REQUIRED>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT item (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT cust_ID (#PCDATA)>
+<!ELEMENT cust_address (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
