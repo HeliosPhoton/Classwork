@@ -1,10 +1,12 @@
+<?php session_start(); ?>
+
 <html>
 <body>
 <center>
 <h1> Book Review Blog </h1>
 <?php
-session_start();
-if($_SESSION['status']==100)
+
+if($_SESSION['status']=100)
 {
 include("dbconnect.php");
 include("managePosts.php");
