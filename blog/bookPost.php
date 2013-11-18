@@ -1,35 +1,49 @@
 <html>
 <body>
+<center>
+<h1> Post <h1>
+</center>
+
 <?php
 include("dbconnect.php");
+include("managePosts.php");
+include("manageComments.php");
 $con= new dbconnect();
 $con->connect();
-$postId = $_POST['postId'];
-$sSql = "SELECT * FROM bookposts WHERE post_id=\"". $postId . "\"";
-$result = mysql_query($sSql);
-$row = mysql_fetch_array($result)
+$postId = $_GET['postId'];
 
-echo "<h1> $row[2]</h1><br>"; // Post Title
-echo "Author: $row[1]<br>"; // Author
-echo "Date Published: $row[5]<br>";
-echo "<p> $row[4]</textarea> </p>";
+$post_result = "SELECT * FROM bookposts WHERE post_id = "$postId"";
+$comment_result = "SELECT * FROM bookcomments WHERE post_id = "$postId"";
 
+$post= new managePosts();
+$post->createQTable();
 
-$result = mysql_query("SELECT * FROM bookcomments WHERE post_id=\"". $postId . "\"");
+while($row = mysql_fetch_array($post_result))
+		{
+			$post->displayQRowEdit($row[0], $row[1], $row[2], $row[3],$row[4]);
+
+		}
+
 
 $comments = new manageComments();
+$comment->createCommentTable();
 
-while($row = mysql_fetch_array($result))
+while($row = mysql_fetch_array($comment_result))
 {
-    echo "<h3>$author</h3> ($datePublished)<br>";
-    echo $comment;
+	$comment->displayRow($row[2], $row[3], $row[4]);
 }
 
 ?>
+
+
 <h3>Leave a comment</h3>
-<form method="POST" action="addComment.php">
+<form method="POST" action="addComment.php?id=$postId\">
     <input type="submit" name="addComment">
 </form>
 <a href="blogphase1.php">Back</a>
+
+<form action="logout.php">";
+<input type = \"submit\" value = \"Logout\"/></form>;
+
 </body>
 </html>
