@@ -5,17 +5,19 @@
 </center>
 
 <?php
+if ($_SESSION['status'] == 100)
+{
 include("dbconnect.php");
-include("managePosts.php");
+include("manageGuests.php");
 include("manageComments.php");
 $con= new dbconnect();
 $con->connect();
-$postId = $_GET['postId'];
+$postId = $_GET['id'];
 
 $post_result = "SELECT * FROM bookposts WHERE post_id = "$postId"";
 $comment_result = "SELECT * FROM bookcomments WHERE post_id = "$postId"";
 
-$post= new managePosts();
+$post= new manageGuests();
 $post->createQTable();
 
 while($row = mysql_fetch_array($post_result))
@@ -33,6 +35,13 @@ while($row = mysql_fetch_array($comment_result))
 	$comment->displayRow($row[2], $row[3], $row[4]);
 }
 
+
+}else
+{
+   echo "You have logged out";
+   echo "<br> Please re-login. You will be directed to the login page in 3 seconds";
+   header("refresh:3 ; url=userloginses.html");
+}
 ?>
 
 

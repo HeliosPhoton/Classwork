@@ -1,7 +1,5 @@
 <?php
 session_start();
-?>
-<?php
 include("dbconnect.php");
 $con= new dbconnect();
 $con->connect();
@@ -19,28 +17,26 @@ if (mysql_num_rows($result) == 1) {
 	$type =$info['type'];
 	}
       echo $type;
+	  echo "<br>";
        if($type == 1)
         {
          $_SESSION['type']=$type; // type of user (admin or regular)
          $_SESSION['status']=100; // indicate that the login is successful
-         echo "Login success, you will be directed to the Book Blog in 3 seconds";
+         echo "Login success, you will be directed to the  Book Blog in 3 seconds";
          header("refresh: 3; url= blogphase1.php");
         }
         elseif($type == 0)
         {
           $_SESSION['type']=$type;
           $_SESSION['status']=100;
-          echo "Login success, you will be directed to the Book Blog in 3 seconds";
+          echo "Login success, you will be directed to the  Book Blog in 3 seconds";
           header("refresh:3 ; url= blogphase1.php");
         }
       
       }  else {
 	//redirect back to login form if not authorized
-	  echo "Incorrect login";
-	  echo "<br>";
-	  echo "Login unsuccessful, you will be redirected to the log in page in 3 seconds";
-         header("refresh:3; url=blogphase2.html");
-		 
+	  echo "incorrect login";
+         header("refresh:5; url=blogphase2.html");
 
 }
 ?>

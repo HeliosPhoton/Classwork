@@ -1,19 +1,20 @@
-<?php session_start(); ?>
-
+<?php
+session_start();
+?>
 <html>
 <body>
 <center>
 <h1> Book Review Blog </h1>
-<?php
 
-if($_SESSION['status']=100)
+<?php
+if($_SESSION['status']==100)
 {
 include("dbconnect.php");
 include("managePosts.php");
 $con= new dbconnect();
 $con->connect();
 error_reporting(E_ALL);
-echo $_SESSION['type']
+echo $_SESSION['type'];
 $result = mysql_query("SELECT * FROM bookposts ORDER BY date_published DESC");
 
 $posts= new managePosts();
@@ -26,21 +27,21 @@ while($row = mysql_fetch_array($result))
     $counter++;
 }
 
+
 }else
 {
    echo "You have logged out";
-   echo "<br> Please re-login. You will be directed to the login page in 5 seconds";
-   header("refresh:5 ; url=login.html");
+   echo "<br> Please re-login. You will be directed to the login page in 3 seconds";
+   header("refresh:3 ; url=userloginses.html");
 }
-
 ?>
 </table>
 <br><br>
 <form action="insertPosts.php">
 <input type="submit" value="Submit a Book Review"/></form>
 
-<form action="logout.php">";
-<input type = \"submit\" value = \"Logout\"/></form>;
+<form action="logout.php">
+<input type ="submit" value ="Logout"/></form>
 
 </center>
 </body>

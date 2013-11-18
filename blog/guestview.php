@@ -2,15 +2,16 @@
 <body>
 <center>
 <h1> Book Review Blog </h1>
+<table>
 <?php
 include("dbconnect.php");
-include("managePosts.php");
+include("manageGuests.php");
 $con= new dbconnect();
 $con->connect();
 error_reporting(E_ALL);
 $result = mysql_query("SELECT * FROM bookposts ORDER BY date_published DESC");
 
-$posts= new managePosts();
+$posts= new manageGuests();
 $posts->createQTable();
 
 $counter = 0;
