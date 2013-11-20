@@ -19,5 +19,7 @@ if (ini_get("session.use_cookies")) {
 
 if(session_destroy())
 echo "Logged Out Successfully!";
+echo "<br> You will be directed to the login page in 3 seconds";
+header("refresh:3 ; url=blogphase2.html");
 ?>
 

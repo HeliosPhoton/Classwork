@@ -29,4 +29,5 @@ if(isset($_POST['submitReview'])) {
 	<input type="submit" name="submitReview" value="Submit Review" />
 
 </form>
-<a href="blogphase1.php">Home</a>
+<form action="blogphase1.php">
+<input type ="submit" value ="Back"/></form>

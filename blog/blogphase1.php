@@ -27,21 +27,43 @@ while($row = mysql_fetch_array($result))
     $counter++;
 }
 
+echo ("</table>");
+echo ("<br\><br\>");
+echo ("<form action=\"insertPosts.php\">");
+echo ("<input type=\"submit\" value=\"Submit a Book Review\"/></form>");
+echo ("<form action=\"logout.php\">");
+echo ("<input type =\"submit\" value =\"Logout\"/></form>");
 
 }else
 {
-   echo "You have logged out";
-   echo "<br> Please re-login. You will be directed to the login page in 3 seconds";
-   header("refresh:3 ; url=userloginses.html");
+include("dbconnect.php");
+include("manageGuests.php");
+$con= new dbconnect();
+$con->connect();
+error_reporting(E_ALL);
+$result = mysql_query("SELECT * FROM bookposts ORDER BY date_published DESC");
+
+$posts= new manageGuests();
+$posts->createQTable();
+
+$counter = 0;
+while($row = mysql_fetch_array($result))
+{
+    $posts->displayQRowEdit($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $counter);
+    $counter++;
 }
+
+echo ("</table>");
+echo ("<br><br>");
+echo ("<form action=\"blogphase2.html\">");
+echo ("<input type=\"submit\" value=\"Return to Login Page\"/></form>");
+
+
+}
+
+
 ?>
 </table>
-<br><br>
-<form action="insertPosts.php">
-<input type="submit" value="Submit a Book Review"/></form>
-
-<form action="logout.php">
-<input type ="submit" value ="Logout"/></form>
 
 </center>
 </body>
