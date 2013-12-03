@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 class managePosts
 {
 function createTable()
@@ -27,16 +30,17 @@ function displayRowEdit($postId, $author, $postTitle, $bookTitle, $post, $datePu
    
    echo "<td> $post </td>";
    echo "<td> $datePublished </td>";
-   
-   echo "<td> <form action=delete.php method=post>";
+  
+  if($_SESSION['type']==1 || $_SESSION['type']==0 && $_SESSION['username']==$author)
+  {
+   echo "<td> <form action=\"delete.php?id=$postId\" method=\"post\">";
    echo "<input type=\"hidden\" name=\"DELETE\" value=$postId>";
    echo "<input type=\"submit\" name=\"delete\" value=\"DELETE\"></form></td>";
    
    
-   echo "<td> <form action=update.php method=\"post\">";
-   echo "<input type=\"hidden\" name=\"UPDATE\" value=$postId>";
+   echo "<td> <form action=\"update.php?id=$postId\" method=\"post\">";
    echo "<input type=\"submit\" name=\"update\" value=\"UPDATE\"></form></td>";
-   
+   }
    
    echo "</tr>";
    

@@ -7,4 +7,4 @@ CREATE TABLE bookcomments (
 					PRIMARY KEY(comment_id),
 					FOREIGN KEY (post_id) 
 					REFERENCES bookposts(post_id) ON DELETE CASCADE ON UPDATE CASCADE
-					);
+					) ENGINE=InnoDB;

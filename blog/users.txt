@@ -6,4 +6,4 @@ CREATE TABLE users (
 					password VARCHAR(15) NOT NULL,
 					type INT NOT NULL,
 					PRIMARY KEY(id)
-					);
+					)ENGINE=InnoDB;

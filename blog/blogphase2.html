@@ -1,18 +1,33 @@
 <html>
 <head>
+<style>
+body
+{
+background-image:url('bg.png');
+	no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
 <title>Book Blog</title>
 </head>
 <body>
 <h1><center>Welcome to the Book Blog</center></h1>
-
+<center>
 <strong><font color= "green"> REGISTERED USERS LOGIN HERE </font></strong>
 <br>
 If you are a registered user, please sign in below
 <form method="post" action="login.php">
+
 <p><strong>username:</strong><br/>
 <input type="text" name="username"/></p>
+
 <p><strong>password:</strong><br/>
 <input type="password" name="password"/></p>
+
 <p><input type="submit" name="submit" value="Login"/></p>
 </form>
 
@@ -21,13 +36,14 @@ If you are a registered user, please sign in below
 
 <strong><font color = "green"> GUEST USERS LOGIN HERE</font></strong>
 <form action = "blogphase1.php">
-<input type="submit" value = "Guest Login">
+<input type="submit" name= "guest" value = "Guest Login">
 </form>
 
 <strong><font color = "green"> REGISTER HERE</font></strong>
-<form action = "register.html">
+<form  action = "register.html">
 <input type="submit" value = "Register">
+</form>
 
-
+</center>
 </body>
 </html>

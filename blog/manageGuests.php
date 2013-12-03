@@ -15,7 +15,7 @@ function createQTable()
 
 }
 
-function displayQRowEdit($postId, $author, $postTitle, $bookTitle, $post, $datePublished)
+function displayRowEdit($postId, $author, $postTitle, $bookTitle, $post, $datePublished)
 {
 
    echo "<tr>";

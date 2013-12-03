@@ -1,5 +1,24 @@
 <?php
 session_start();
+?>
+<html>
+<head>
+<style>
+body
+{
+background-image:url('bg.png');
+	no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
+</head>
+<body>
+<center>
+<?php
 session_unset(); 
 
 // Unset all of the session variables.
@@ -21,5 +40,11 @@ if(session_destroy())
 echo "Logged Out Successfully!";
 echo "<br> You will be directed to the login page in 3 seconds";
 header("refresh:3 ; url=blogphase2.html");
+echo ("<form action=\"blogphase2.html\">");
+echo ("<input type=\"submit\" value=\"Redirect Now\"/></form>");
+
 ?>
 
+</center>
+</body>
+</html>

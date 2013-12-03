@@ -2,9 +2,23 @@
 session_start();
 ?>
 <html>
+<head>
+<style>
+body
+{
+background-image:url('bg.png');
+	no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
+</head>
 <body>
 <center>
-<h1> Post <?php $_GET['id']?> <h1>
+<h1> Post <?php echo $_GET['id']?> <h1>
 <?php
 // hyperlink php
 
@@ -13,9 +27,14 @@ $con= new dbconnect();
 $con->connect();
 
 if(isset($_GET['id'])) {
+
+
        $post_id = $_GET['id'];
        $result = mysql_query("SELECT * FROM bookposts WHERE post_id=\"$post_id\"");
        $cresult = mysql_query("SELECT * FROM bookcomments WHERE post_id=\"$post_id\"");
+	   
+	   
+
 
 	     echo "<table border=1>";
 				echo "<tr>";
@@ -58,7 +77,7 @@ if(isset($_GET['id'])) {
                echo("<br/>");
                
 ?>
-
+<br>
 
 </table>
 <br><br>

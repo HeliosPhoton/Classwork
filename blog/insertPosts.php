@@ -1,4 +1,22 @@
+<?php
+session_start();
+?>
+<html>
+<head>
+<style>
+body
+{
+background-image:url('bg.png');
+	no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+</style>
+</head>
+<body>
 <?php
 include("dbconnect.php"); 
 $con= new dbconnect();
@@ -10,7 +28,7 @@ if(isset($_POST['submitReview'])) {
 		`book_title` ,
 		`post` 
 		)
-		 VALUES ('".$_POST['author']."', '".$_POST['post_title']."', '".$_POST['book_title']."','".$_POST['post']."')";
+		 VALUES ('".$_SESSION['username']."', '".$_POST['post_title']."', '".$_POST['book_title']."','".$_POST['post']."')";
         echo "$sSql <br>";
 	mysql_query($sSql);
         $update=mysql_affected_rows();
@@ -20,7 +38,6 @@ if(isset($_POST['submitReview'])) {
 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
 
 
-	Author: <input type="text" name="author" /><br />
 	Post Title: <input type="text" name="post_title" /><br />
 	Book Title: <input type="text" name="book_title" /><br />
 	Post: <input type="text" name="post" /><br />
@@ -31,3 +48,5 @@ if(isset($_POST['submitReview'])) {
 </form>
 <form action="blogphase1.php">
 <input type ="submit" value ="Back"/></form>
+</body>
+</html>
